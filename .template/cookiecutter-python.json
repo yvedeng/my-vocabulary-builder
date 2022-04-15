@@ -1,0 +1,18 @@
+ {
+   "cookiecutter": {
+    "package_name": "my-vocabulary-builder",
+    "project_slug": "my-vocabulary-builder",
+    "project_title": "My vocabulary builder",
+    "project_short_description": "An app to build vocabulary",
+    "app_name": "minordbog",
+    "full_name": "Yifang Deng",
+    "version": "0.0.0",
+    "github_username": "yvedeng",
+    "email": "yvedenge@gmail.com",
+    "open_source_license": "MIT license",
+    "_copy_without_render": [
+      ".github/*"
+    ],
+    "_template": "gh:LeisureTech/cookiecutter-python"
+  }
+}

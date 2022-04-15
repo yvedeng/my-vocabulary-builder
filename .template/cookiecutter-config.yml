@@ -1,0 +1,5 @@
+default_context:
+    full_name: "Leisure Mojo"
+    email: "leisuremojotech@gmail.com"
+    github_username: "leisuremojo"
+replay_dir: "~/cookiecutter_python_example/.template"

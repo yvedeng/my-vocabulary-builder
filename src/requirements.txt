@@ -1,0 +1,2 @@
+pytest==5.4.3
+PyMongo==4.1.1
