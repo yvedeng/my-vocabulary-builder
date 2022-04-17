@@ -28,7 +28,6 @@ jobs:
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
-      - checkout
       - run: python --version
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "src/requirements.txt" }}
