@@ -30,17 +30,18 @@ jobs:
     steps:
       - checkout
       - run: python --version
-      - python/install-packages:
-          pkg-manager: pip
-          app-dir: ~/src  # If you're requirements.txt isn't in the root directory.
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "src/requirements.txt" }}
       - run:
-          name: Run tests
-          # This assumes pytest is installed via the install-package step above
-          command: pytest
-      - persist_to_workspace:
-          root: ~/my-vocabulary-builder 
+          name: Install Python deps in a venv
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r src/requirements.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "src/requirements.txt }}
           paths:
-            - .
+            - "venv"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
