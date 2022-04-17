@@ -37,6 +37,10 @@ jobs:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: pytest
+      - persist_to_workspace:
+          root: ~/my-vocabulary-builder 
+          paths:
+            - .
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
