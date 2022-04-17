@@ -1,0 +1,6 @@
+ENV = 'development'
+DEBUG = True
+MONGO_HOST = "127.0.0.1"
+MONGO_PORT = 20001
+MONGO_USERNAME = "root"
+MONGO_PASSWORD = "123456"
